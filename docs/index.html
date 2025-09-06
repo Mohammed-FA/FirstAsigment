@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style/output.css">
+</head>
+
+<body>
+
+    <header class="bg-white shadow-md">
+
+        <nav class="bg-secendy-bg text-white text-xs sm:text-sm py-2  ">
+            <div class="flex flex-row justify-between items-center gap-2 max-w-7xl px-4 mx-auto">
+                <div
+                    class="flex flex-col sm:flex-row gap-3 w-full lg:justify-start justify-center flex-wrap  lg:w-1/2 sm:gap-7 items-center">
+                    <div>
+                        <a class="flex items-center">
+                            <i class="bi bi-telephone mr-2 "></i>
+                            (800) 123 456 7890
+                        </a>
+                    </div>
+                    <div>
+                        <a>
+                            <i class="bi bi-envelope mr-1"></i>
+                            manager@youshop.com
+                        </a>
+                    </div>
+                </div>
+                <div class=" flex-wrap justify-between text-sm lg:flex hidden   items-center w-3/5 ">
+                    <a href="#" class="flex items-center gap-1 hover:underline">
+                        <i class="bi mr-1 bi-geo-alt-fill"></i> Location store
+                    </a>
+                    <a href="#" class="flex items-center gap-1 hover:underline">
+                        <i class="bi mr-1 bi-journal-text"></i> Blog
+                    </a>
+                    <a href="#" class="flex items-center gap-1 hover:underline">
+                        <i class="bi mr-1 bi-shield-check"></i> Guarantee
+                    </a>
+                    <a href="#" class="flex items-center gap-1 hover:underline">
+                        <i class="bi mr-1 bi-credit-card"></i> Payment
+                    </a>
+                    <a href="#" class="flex items-center gap-1 hover:underline">
+                        <i class="bi mr-1 bi-truck"></i> Delivery
+                    </a>
+                    <a href="#" class="flex items-center gap-1 hover:underline">
+                        <i class="bi mr-1 bi-box-arrow-in-right"></i> Register or Sign in
+                    </a>
+                </div>
+                <button class="lg:hidden cursor-pointer" onclick="MoblieNavBar(`topNavBar`)"><i
+                        class="bi bi-three-dots"></i></button>
+            </div>
+            <!-- moblie -->
+            <div id="topNavBar"
+                class=" fixed flex hidden justify-end  w-screen h-screen overflow-hidden z-50 bg-black/50 top-0   text-black   overflow-x-auto   mx-auto ">
+                <div class="bg-white w-1/2 h-full rounded-l-2xl rounded-bl-2xl p-5">
+                    <div class="flex justify-between">
+                        <button onclick="MoblieNavBar(`topNavBar`)">close</button>
+                        <h1>logo</h1>
+                    </div>
+                    <div class="w-full h-full   flex justify-center items-center">
+                        <div class="text-base flex flex-col  h-1/2   justify-between     items-center">
+
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <i class="bi mr-1 bi-geo-alt-fill"></i> Location store
+                            </a>
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <i class="bi mr-1 bi-journal-text"></i> Blog
+                            </a>
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <i class="bi mr-1 bi-shield-check"></i> Guarantee
+                            </a>
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <i class="bi mr-1 bi-credit-card"></i> Payment
+                            </a>
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <i class="bi mr-1 bi-truck"></i> Delivery
+                            </a>
+                            <a href="#" class="flex items-center gap-1 hover:underline">
+                                <i class="bi mr-1 bi-box-arrow-in-right"></i> Register or Sign in
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div
+            class="max-w-7xl px-4 mx-auto flex sm:flex-nowrap justify-center flex-wrap  flex-row xxs:justify-between items-center py-4   sm:gap-4">
+            <div
+                class="lg:text-4xl text-3xl order-1 sm:order-none font-bold justify-center  text-primary xxs:justify-start items-center gap-2 sm:w-fit xxs:w-1/2 w-full flex">
+                <button class="cursor-pointer font-bold sm:hidden" onclick="MoblieNavBar(`MoblieNavBarList`)"><i
+                        class="bi bi-list"></i></button>
+                <h1>
+
+                    YOU<span class="text-secendy">SHOP</span>
+                </h1>
+            </div>
+            <div>
+                <p class="max-w-32 mt-2 toptablet:block hidden lg:text-xs text-10px">Description of your online store
+                </p>
+            </div>
+            <div class="w-full sm:flex-1 order-3 sm:order-none  mt-4 sm:mt-0">
+                <div class="flex relative ">
+                    <input type="text" placeholder="Search..."
+                        class="w-full border border-gray-300 rounded-full   px-5   py-2  lg:text-base text-sm focus:outline-0">
+                    <button
+                        class="bg-primary  right-0 py-2 px-7 flex justify-center items-center text-white rounded-full  rounded-l top-0 h-full  absolute text-base cursor-pointer">
+                        <i class="bi bi-search flex"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <p class="max-w-32 toptablet:block hidden  text-center text-primary font-medium lg:text-xs text-10px">7
+                    days a
+                    week
+                    from 8:00 am to
+                    5:00 pm</p>
+
+            </div>
+            <div
+                class="flex xl:gap-10 gap-3 items-center xxs:justify-end order-2 justify-center sm:w-fit xxs:w-1/2 w-full sm:order-none ">
+                <div class="relative">
+                    <i class="bi bi-heart lg:text-4xl text-3xl"></i>
+                    <div class="rounded-full absolute top-2 -right-2 h-5 w-5 lg:flex hidden justify-center items-center bg-primary   text-white"
+                        style="font-size: 9px;">13</div>
+                </div>
+                <div class="relative">
+                    <i class="bi bi-cart3 lg:text-4xl text-3xl"></i>
+                    <div class="rounded-full absolute top-2 lg:flex hidden -right-2 h-5 w-5  justify-center items-center bg-primary   text-white"
+                        style="font-size: 9px;">0</div>
+                </div>
+            </div>
+            <div class=" items-center space-x-3 lg:flex hidden">
+                <span class="text-gray-600 text-sm"><span class="text-secendy font-bold">My Cart</span><br> $0.00</span>
+            </div>
+        </div>
+
+        <nav class=" text-black sm:block hidden  mt-3 overflow-x-auto max-w-7xl px-4 mx-auto">
+            <div class="border-t w-full  border-gray-400">
+                <ul class="flex justify-between   toptablet:text-base text-xs  mr-auto lg:w-[90%] items-center">
+                    <li
+                        class="toptablet:w-1/4 w-40 bg-primary px-4 items-center  text-center flex pb-2 pt-1 text-white">
+                        <a href="#" class="font-semibold flex items-center toptablet:gap-3 gap-1 ">
+                            <div>
+
+                                <i class="bi bi-list toptablet:text-4xl text-2xl"></i>
+                            </div>
+                            <div class="toptablet:mt-0 mt-1">
+
+                                All
+                                Categories
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#">Apple</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Meizu</a></li>
+                    <li><a href="#">Xiaomi</a></li>
+                    <li><a href="#">Huawei</a></li>
+                    <li><a href="#">Asus</a></li>
+                    <li><a href="#">Nokia</a></li>
+                    <li><a href="#">Metotola</a></li>
+                    <li><a href="#">Caterpillar</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Mobile -->
+
+        <nav id="MoblieNavBarList"
+            class=" text-black fixed hidden w-screen h-screen overflow-hidden z-50 bg-black/50 top-0     overflow-x-auto   mx-auto">
+            <div class="bg-white w-1/2 h-full rounded-br-2xl rounded-r-2xl px-3">
+                <div class="flex justify-between">
+                    <h1>logo</h1>
+                    <button onclick="MoblieNavBar(`MoblieNavBarList`)">close</button>
+                </div>
+                <div class="w-full h-full   flex justify-center items-center">
+                    <ul class="text-base flex flex-col  h-1/2   justify-between     items-center">
+                        <li class="text-primary"><a href="#" class="font-semibold  ">All
+                                Categories</a></li>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Meizu</a></li>
+                        <li><a href="#">Xiaomi</a></li>
+                        <li><a href="#">Huawei</a></li>
+                        <li><a href="#">Asus</a></li>
+                        <li><a href="#">Nokia</a></li>
+                        <li><a href="#">Metotola</a></li>
+                        <li><a href="#">Caterpillar</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="max-w-7xl px-4 mx-auto my-5 flex flex-col gap-7">
+        <div class="text-gray-600 text-sm">
+            <p class=""><span> <a href="#"> Home</a></span> /<span><a href="#"> Catogores</a></span> /<span><a href="#">
+                        Tablet &
+                        Laptops
+                        Accessories</a></span></p>
+
+        </div>
+        <h1 class="text-graytext font-bold text-17rem ">Tablet &
+            Laptops
+            Accessories</h1>
+        <section class=" flex flex-col lg:flex-row  gap-8">
+            <aside
+                class="w-full lg:w-1/4  sticky top-1 overflow-y-auto max-h-screen  bg-white shadow-lg rounded  pt-4 space-y-3 order-2 lg:order-1">
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Related Categories</h2>
+                    </div>
+                    <div class="ml-7 text-sm flex flex-col gap-1">
+                        <p class="text-graytext font-medium">
+                            < Catogores</p>
+                                <ul class="ml-4 text-secendy/90 font-medium space-y-1">
+                                    <li><a href="#">Tablet & Laptops Accessories</a></li>
+                                </ul>
+                    </div>
+                </div>
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Related Categories</h2>
+                    </div>
+                    <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-2">
+                        <button
+                            class="border bg-white  justify-between border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
+                            <span class="font-semibold">Android 6.0</span>
+                            <i class="bi bi-x text-2xl leading-0"></i>
+                        </button>
+                        <p class="text-primary ml-4 font-medium">Clean All </p>
+                    </div>
+                </div>
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Price</h2>
+                    </div>
+                    <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-3">
+                        <input type="range" min="55" max="5000" class="w-full bg-primary">
+                        <button id="dropdownButton" class="  text-gray-700 flex items-center ">
+                            Price:<span class="font-semibold">$55 - $5000</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Operating System</h2>
+                    </div>
+                    <div class="ml-7 text-sm flex flex-col gap-1">
+                        <ul class=" text-graytext font-medium  space-y-1">
+                            <li class="text-primary">Android 6.0</li>
+                            <li>Android 6.0</li>
+                            <li>Android 6.0</li>
+                            <li>Android 6.0</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Screen Size</h2>
+                    </div>
+                    <div class="ml-7 text-sm flex flex-col gap-1">
+                        <ul class=" text-graytext font-medium  flex flex-col gap-2">
+                            <li>1920x1200</li>
+                            <li>1280x800</li>
+                            <li>2560x1600</li>
+                            <li>1920x1080</li>
+                            <li>2048x1536</li>
+                            <li>1920x1280</li>
+                            <li>1024x600</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Product Core</h2>
+                    </div>
+                    <div class="ml-7 text-sm flex flex-col gap-1">
+
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Table Data Capacity</h2>
+                    </div>
+                    <div class="ml-7 text-sm flex flex-col gap-1">
+
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Processor Core</h2>
+                    </div>
+                    <div class="ml-7 text-sm flex flex-col gap-1">
+
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                        <button class="w-5 h-5">
+                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                        </button>
+                        <h2 class="font-semibold mb-2">Table Data Capacity</h2>
+                    </div>
+                    <div class="ml-7 text-sm flex flex-col gap-1">
+
+                    </div>
+                </div>
+
+            </aside>
+
+            <section class="flex-1 order-1 lg:order-2">
+                <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-3">
+                    <div class="flex items-center gap-4 ">
+                        <div>
+                            <i class="bi bi-grid-fill text-primary text-xl"></i>
+                            <i class="bi bi-list text-black/20 font-black text-2xl"></i>
+                        </div>
+
+                        <div>
+
+                            <p class="text-gray-600 text-sm mt-1">Showing 16 / 125 results</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+
+                        <button id="dropdownButton"
+                            class="border bg-white border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
+                            Sort by: <span class="font-semibold">price low to high</span>
+                            <i class="bi bi-caret-down-fill text-gray-500"></i>
+                        </button>
+                        <div id="dropdownMenu"
+                            class="absolute right-1 top-6 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg hidden">
+                            <ul class="py-2 text-gray-700">
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">price low to high</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">price high to low</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">newest first</li>
+                                <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">oldest first</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid grid-cols-1 xxsm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 ">
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="bg-white relative hover:z-20 group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <span
+                            class="rounded-r-2xl rounded-br-2xl bg-red-500 absolute top-0 left-0 px-3 py-1 text-white">-50%</span>
+                        <div class="w-full h-80">
+                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="bg-white relative group rounded hover:z-20 hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <span
+                            class="rounded-r-2xl rounded-br-2xl  bg-blue-500 absolute top-0 left-0 px-3 py-1 text-white">New</span>
+                        <div class="w-full h-80">
+                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
+                        <div class="w-full h-80">
+                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <div class="flex gap-2 text-startcolor">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill text-gray-300"></i>
+                            </div>
+                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
+                            <p class="text-black font-bold ">$329.99</p>
+
+                            <div
+                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
+                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
+                                <button
+                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
+                                    <i class="bi bi-heart"></i>
+
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <button
+                    class="w-full flex justify-center items-center border border-gray-300 py-3 gap-2 text-base text-black/70 my-7 bg-white">
+                    <i class="bi bi-arrow-clockwise before:rotate-45"></i>
+
+                    Show more
+                </button>
+                <div class=" flex justify-center items-center ">
+                    <div class="flex items-center space-x-2">
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 hover:bg-blue-100 transition-colors">
+                            <i class="bi bi-chevron-left text-gray-600"></i>
+                        </button>
+
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-primary text-white font-medium">1</button>
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 hover:bg-blue-100 font-medium">2</button>
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 hover:bg-blue-100 font-medium">3</button>
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 hover:bg-blue-100 font-medium">4</button>
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 hover:bg-blue-100 font-medium">5</button>
+
+                        <span class="px-2 text-gray-500">...</span>
+
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 hover:bg-blue-100 font-medium">26</button>
+
+                        <button
+                            class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 hover:bg-blue-100 transition-colors">
+                            <i class="bi bi-chevron-right text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+    </main>
+
+    <footer class="bg-secendy-bg text-white/80 pt-8 mt-10">
+        <div class="max-w-7xl px-4 mx-auto grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 sm:gap-8 gap-4 ">
+            <div class="parent">
+                <button class="font-semibold showmenua text-white mb-3 sm:cursor-default cursor-pointer">Contact
+                    us</button>
+                <div class="sm:block hidden">
+                    <p>(800) 123 456 7890</p>
+                    <p>manager@youshop.com</p>
+                    <p>Location store</p>
+                </div>
+            </div>
+            <div class="parent">
+                <button class="font-semibold text-white showmenua mb-3 sm:cursor-default cursor-pointer">Policies &
+                    Info</button>
+
+                <ul class="space-y-1 sm:block hidden">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Policy for Sellers</a></li>
+                    <li><a href="#">Policy for Buyers</a></li>
+                    <li><a href="#">Shopping & Refund</a></li>
+                    <li><a href="#">Whilesale Policy</a></li>
+
+
+                </ul>
+            </div>
+            <div class="parent">
+                <button class="font-semibold showmenua text-white mb-3 sm:cursor-default cursor-pointer">Quick
+                    Links</button>
+                <ul class="space-y-1 sm:block hidden">
+                    <li><a href="#">Seller Login</a></li>
+                    <li><a href="#">Seller Sign-up</a></li>
+                    <li><a href="#">Seller Handbook</a></li>
+                    <li><a href="#">Seller control</a></li>
+                    <li><a href="#">Seller Seller FAQs</a></li>
+
+                </ul>
+            </div>
+            <div class="parent">
+                <button class="font-semibold showmenua text-white mb-3 sm:cursor-default cursor-pointer">My
+                    Account</button>
+
+                <ul class="space-y-1 sm:block hidden">
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Balcony Tabl</a></li>
+                    <li><a href="#">Bar Units</a></li>
+                    <li><a href="#">Beds</a></li>
+                    <li><a href="#">Bedside Tables</a></li>
+
+                </ul>
+            </div>
+            <div class="flex flex-col gap-4 sm:col-span-2 lg:col-span-1">
+                <h4 class="font-semibold text-white ">Subscribe</h4>
+                <p class="text-white/90 text-sm tracking-wide leading-5">Confirm to popular belief of larem Ipsm Latin
+                    amet Itin from</p>
+                <div class="flex relative  ">
+                    <input type="text" placeholder="Your email address..."
+                        class="w-full bg-white text-black placeholder:text-gray-600 rounded-full   px-4   py-2   text-sm focus:outline-0">
+                    <button
+                        class="bg-primary  right-0 py-2 px-3 flex justify-center items-center text-white rounded-full  rounded-l top-0 h-full  absolute text-base cursor-pointer">
+                        <i class="bi bi-search flex"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-black mt-14">
+
+            <div class="max-w-7xl px-4 py-3 text-sm mx-auto text-white/50">
+
+                <div>
+                    <h1>Copyright 2018</h1>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let showmenua = document.querySelectorAll(".showmenua");
+        showmenua.forEach(item => {
+            item.addEventListener("click", (event) => {
+
+                event.target.closest(".parent").children[1].classList.toggle("hidden")
+            })
+        })
+
+
+        function MoblieNavBar(id) {
+            let container = document.getElementById(id);
+            container.classList.toggle("hidden");
+        }
+
+        // select 
+        const button = document.getElementById("dropdownButton");
+        const menu = document.getElementById("dropdownMenu");
+        const options = menu.querySelectorAll("li");
+        const selectedText = button.querySelector("span");
+
+        // Toggle menu
+        button.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+
+        // Pick option
+        options.forEach(option => {
+            option.addEventListener("click", () => {
+                selectedText.textContent = option.textContent;
+                menu.classList.add("hidden");
+            });
+        });
+
+        // Close menu if click outside
+        document.addEventListener("click", (e) => {
+            if (!button.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.add("hidden");
+            }
+        });
+    </script>
+</body>
+
+</html>
