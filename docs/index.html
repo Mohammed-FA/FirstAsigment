@@ -72,7 +72,9 @@
                 class=" fixed flex hidden justify-end  w-screen h-screen overflow-hidden z-50 bg-black/50 top-0   text-black   overflow-x-auto   mx-auto ">
                 <div class="bg-white w-1/2 h-full rounded-l-2xl rounded-bl-2xl p-5">
                     <div class="flex justify-between">
-                        <button onclick="MoblieNavBar(`topNavBar`)">close</button>
+                        <button onclick="MoblieNavBar(`topNavBar`)">
+                            <i class="bi bi-x text-2xl leading-0"></i>
+                        </button>
                         <h1>logo</h1>
                     </div>
                     <div class="w-full h-full   flex justify-center items-center">
@@ -187,10 +189,12 @@
 
         <nav id="MoblieNavBarList"
             class=" text-black fixed hidden w-screen h-screen overflow-hidden z-50 bg-black/50 top-0     overflow-x-auto   mx-auto">
-            <div class="bg-white w-1/2 h-full rounded-br-2xl rounded-r-2xl px-3">
+            <div class="bg-white w-1/2 h-full rounded-br-2xl rounded-r-2xl px-3 p-5">
                 <div class="flex justify-between">
                     <h1>logo</h1>
-                    <button onclick="MoblieNavBar(`MoblieNavBarList`)">close</button>
+                    <button onclick="MoblieNavBar(`MoblieNavBarList`)">
+                        <i class="bi bi-x text-2xl leading-0"></i>
+                    </button>
                 </div>
                 <div class="w-full h-full   flex justify-center items-center">
                     <ul class="text-base flex flex-col  h-1/2   justify-between     items-center">
@@ -225,138 +229,144 @@
             Laptops
             Accessories</h1>
         <section class=" flex flex-col lg:flex-row  gap-8">
-            <aside
-                class="w-full lg:w-1/4 lg:block hidden  sticky top-1 overflow-y-auto max-h-screen  bg-white shadow-lg rounded  pt-4 space-y-3 order-2 lg:order-1">
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Related Categories</h2>
-                    </div>
-                    <div class="ml-7 text-sm flex flex-col gap-1">
-                        <p class="text-graytext font-medium">
-                            < Catogores</p>
-                                <ul class="ml-4 text-secendy/90 font-medium space-y-1">
-                                    <li><a href="#">Tablet & Laptops Accessories</a></li>
-                                </ul>
-                    </div>
-                </div>
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Related Categories</h2>
-                    </div>
-                    <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-2">
-                        <button
-                            class="border bg-white  justify-between border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
-                            <span class="font-semibold">Android 6.0</span>
+            <aside id="sidebar"
+                class="  lg:w-1/4    fixed top-0 right-0 lg:sticky z-50 w-full  lg:top-1 hidden flex lg:flex justify-end  bg-black/50  lg:bg-white max-h-screen  order-2 lg:order-1">
+                <div class="lg:w-full relative w-1/2 bg-white shadow-lg rounded-l-2xl rounded-bl-2xl  pt-4 ">
+                    <div class="lg:hidden px-3">
+                        <button class="" onclick="MoblieNavBar(`sidebar`)">
                             <i class="bi bi-x text-2xl leading-0"></i>
                         </button>
-                        <p class="text-primary ml-4 font-medium">Clean All </p>
                     </div>
-                </div>
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Price</h2>
-                    </div>
-                    <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-3">
-                        <input type="range" min="55" max="5000" class="w-full bg-primary">
-                        <button class="  text-gray-700 flex items-center ">
-                            Price:<span class="font-semibold">$55 - $5000</span>
-                        </button>
-                    </div>
-                </div>
+                    <div class="space-y-3 overflow-y-auto max-h-screen">
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Related Categories</h2>
+                            </div>
+                            <div class="ml-7  flex  text-sm  flex-col gap-1">
+                                <p class="text-graytext font-medium">
+                                    < Catogores</p>
+                                        <ul class="ml-4 text-secendy/90 font-medium space-y-1">
+                                            <li><a href="#">Tablet & Laptops Accessories</a></li>
+                                        </ul>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Related Categories</h2>
+                            </div>
+                            <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-2">
+                                <button
+                                    class="border bg-white  justify-between border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
+                                    <span class="font-semibold">Android 6.0</span>
+                                    <i class="bi bi-x text-2xl leading-0"></i>
+                                </button>
+                                <p class="text-primary ml-4 font-medium">Clean All </p>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Price</h2>
+                            </div>
+                            <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-3">
+                                <input type="range" min="55" max="5000" class="w-full bg-primary">
+                                <button class="  text-gray-700 flex items-center ">
+                                    Price:<span class="font-semibold">$55 - $5000</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Operating System</h2>
+                            </div>
+                            <div class="ml-7 text-sm flex flex-col gap-1">
+                                <ul class=" text-graytext font-medium  space-y-1">
+                                    <li class="text-primary">Android 6.0</li>
+                                    <li>Android 6.0</li>
+                                    <li>Android 6.0</li>
+                                    <li>Android 6.0</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Operating System</h2>
-                    </div>
-                    <div class="ml-7 text-sm flex flex-col gap-1">
-                        <ul class=" text-graytext font-medium  space-y-1">
-                            <li class="text-primary">Android 6.0</li>
-                            <li>Android 6.0</li>
-                            <li>Android 6.0</li>
-                            <li>Android 6.0</li>
-                        </ul>
-                    </div>
-                </div>
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Screen Size</h2>
+                            </div>
+                            <div class="ml-7 text-sm flex flex-col gap-1">
+                                <ul class=" text-graytext font-medium  flex flex-col gap-2">
+                                    <li>1920x1200</li>
+                                    <li>1280x800</li>
+                                    <li>2560x1600</li>
+                                    <li>1920x1080</li>
+                                    <li>2048x1536</li>
+                                    <li>1920x1280</li>
+                                    <li>1024x600</li>
+                                </ul>
+                            </div>
+                        </div>
 
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Product Core</h2>
+                            </div>
+                            <div class="ml-7 text-sm flex flex-col gap-1">
 
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill text-black mb-1"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Screen Size</h2>
-                    </div>
-                    <div class="ml-7 text-sm flex flex-col gap-1">
-                        <ul class=" text-graytext font-medium  flex flex-col gap-2">
-                            <li>1920x1200</li>
-                            <li>1280x800</li>
-                            <li>2560x1600</li>
-                            <li>1920x1080</li>
-                            <li>2048x1536</li>
-                            <li>1920x1280</li>
-                            <li>1024x600</li>
-                        </ul>
-                    </div>
-                </div>
+                            </div>
+                        </div>
 
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Table Data Capacity</h2>
+                            </div>
+                            <div class="ml-7 text-sm flex flex-col gap-1">
 
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Product Core</h2>
-                    </div>
-                    <div class="ml-7 text-sm flex flex-col gap-1">
+                            </div>
+                        </div>
 
-                    </div>
-                </div>
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Processor Core</h2>
+                            </div>
+                            <div class="ml-7 text-sm flex flex-col gap-1">
 
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Table Data Capacity</h2>
-                    </div>
-                    <div class="ml-7 text-sm flex flex-col gap-1">
+                            </div>
+                        </div>
 
-                    </div>
-                </div>
+                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                            <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
+                                <button class="w-5 h-5">
+                                    <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
+                                </button>
+                                <h2 class="font-semibold mb-2">Table Data Capacity</h2>
+                            </div>
+                            <div class="ml-7 text-sm flex flex-col gap-1">
 
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Processor Core</h2>
-                    </div>
-                    <div class="ml-7 text-sm flex flex-col gap-1">
-
-                    </div>
-                </div>
-
-                <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
-                    <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
-                        <button class="w-5 h-5">
-                            <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
-                        </button>
-                        <h2 class="font-semibold mb-2">Table Data Capacity</h2>
-                    </div>
-                    <div class="ml-7 text-sm flex flex-col gap-1">
-
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -369,19 +379,17 @@
                             <i class="bi bi-grid-fill text-primary text-xl"></i>
                             <i class="bi bi-list text-black/20 font-black text-2xl"></i>
                         </div>
-
                         <div>
-
                             <p class="text-gray-600 text-sm mt-1">Showing 16 / 125 results</p>
                         </div>
                     </div>
-                    <div class="relative">
-
+                    <div class="relative flex gap-2 items-center">
                         <button id="dropdownButton"
                             class="border bg-white border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
                             Sort by: <span class="font-semibold">price low to high</span>
                             <i class="bi bi-caret-down-fill text-gray-500"></i>
                         </button>
+
                         <div id="dropdownMenu"
                             class="absolute right-1 z-50 top-6 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg hidden">
                             <ul class="py-2 text-gray-700">
@@ -391,6 +399,8 @@
                                 <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">oldest first</li>
                             </ul>
                         </div>
+                        <button class="lg:hidden block text-2xl mb-3 cursor-pointer" onclick="MoblieNavBar(`sidebar`)"><i class="bi bi-filter-right"></i>
+                        </button>
                     </div>
 
                 </div>
