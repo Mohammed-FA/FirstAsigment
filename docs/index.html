@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="./style/output.css">
 </head>
 
-<body>
+<body class="overflow-x-hidden!">
 
     <header class="bg-white shadow-md">
-        <div id="Loading" class="fixed w-screen h-screen top-0 left-0 flex justify-center items-center bg-white z-50">
+        <div id="Loading" class="fixed w-screen h-screen top-0 left-0 flex justify-center items-center bg-white "
+            style="z-index: 100;">
             <div role="status">
                 <svg aria-hidden="true" class="w-14 h-14 text-gray-200 animate-spin  fill-primary" viewBox="0 0 100 101"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                        fill="white" />
+                        fill="gray" />
                     <path
                         d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
                         fill="currentFill" />
@@ -27,7 +28,7 @@
             </div>
         </div>
 
-        <nav class="bg-secendy-bg text-white text-xs sm:text-sm py-2  ">
+        <nav class="bg-secendy-bg text-white text-xs sm:text-sm py-2   ">
             <div class="flex flex-row justify-between items-center gap-2 max-w-7xl px-4 mx-auto">
                 <div
                     class="flex flex-col sm:flex-row gap-3 w-full lg:justify-start justify-center flex-wrap  lg:w-1/2 sm:gap-7 items-center">
@@ -64,15 +65,17 @@
                         <i class="bi mr-1 bi-box-arrow-in-right"></i> Register or Sign in
                     </a>
                 </div>
-                <button class="lg:hidden cursor-pointer" onclick="MoblieNavBar(`topNavBar`)"><i
+                <button class="lg:hidden cursor-pointer" onclick="MoblieNavBar(`topNavBar`,true)"><i
                         class="bi bi-three-dots"></i></button>
             </div>
             <!-- moblie -->
-            <div id="topNavBar" onclick="MoblieNavBar(`topNavBar`)"
-                class=" fixed flex hidden justify-end  w-screen h-screen overflow-hidden z-50 bg-black/50 top-0   text-black   overflow-x-auto   mx-auto ">
-                <div onclick="event.stopPropagation()" class="bg-white w-1/2 h-full rounded-l-2xl rounded-bl-2xl p-5">
+            <div id="topNavBar" onclick="MoblieNavBar(`topNavBar`,true)"
+                class=" fixed flex opacity-0 hidden justify-end  w-screen h-screen overflow-hidden z-50 bg-black/50 top-0 duration-300   text-black   overflow-x-auto   mx-auto ">
+                <div onclick="event.stopPropagation()"
+                    class="bg-white xxsm:w-1/2 w-full h-full duration-300   xxsm:rounded-l-2xl xxsm:rounded-bl-2xl p-5"
+                    style="transform: translateX(100%);">
                     <div class="flex justify-between">
-                        <button onclick="MoblieNavBar(`topNavBar`)">
+                        <button onclick="MoblieNavBar(`topNavBar`,true)" class="cursor-pointer">
                             <i class="bi bi-x text-2xl leading-0"></i>
                         </button>
                         <h1>logo</h1>
@@ -156,30 +159,9 @@
 
         <nav class=" text-black sm:block hidden  mt-3 overflow-x-auto max-w-7xl px-4 mx-auto">
             <div class="border-t w-full  border-gray-400">
-                <ul class="flex justify-between   toptablet:text-base text-xs  mr-auto lg:w-[90%] items-center">
-                    <li
-                        class="toptablet:w-1/4 w-40 bg-primary px-4 items-center  text-center flex pb-2 pt-1 text-white">
-                        <a href="#" class="font-semibold flex items-center toptablet:gap-3 gap-1 ">
-                            <div>
+                <ul
+                    class="flex justify-between  listitems  toptablet:text-base text-xs  mr-auto lg:w-[90%] items-center">
 
-                                <i class="bi bi-list toptablet:text-4xl text-2xl"></i>
-                            </div>
-                            <div class="toptablet:mt-0 mt-1">
-
-                                All
-                                Categories
-                            </div>
-                        </a>
-                    </li>
-                    <li><a href="#">Apple</a></li>
-                    <li><a href="#">Samsung</a></li>
-                    <li><a href="#">Meizu</a></li>
-                    <li><a href="#">Xiaomi</a></li>
-                    <li><a href="#">Huawei</a></li>
-                    <li><a href="#">Asus</a></li>
-                    <li><a href="#">Nokia</a></li>
-                    <li><a href="#">Metotola</a></li>
-                    <li><a href="#">Caterpillar</a></li>
 
                 </ul>
             </div>
@@ -189,26 +171,17 @@
 
         <nav onclick="MoblieNavBar(`MoblieNavBarList`)" id="MoblieNavBarList"
             class=" text-black fixed hidden w-screen h-screen overflow-hidden z-50 bg-black/50 top-0     overflow-x-auto   mx-auto">
-            <div onclick="event.stopPropagation()" class="bg-white w-1/2 h-full rounded-br-2xl rounded-r-2xl px-3 p-5">
+            <div onclick="event.stopPropagation()"
+                class="bg-white xxsm:w-1/2 w-full h-full duration-300  xxsm:rounded-br-2xl xxsm:rounded-r-2xl px-3 p-5"
+                style="transform: translateX(-100%);">
                 <div class="flex justify-between">
                     <h1>logo</h1>
-                    <button onclick="MoblieNavBar(`MoblieNavBarList`)">
+                    <button onclick="MoblieNavBar(`MoblieNavBarList`)" class="cursor-pointer">
                         <i class="bi bi-x text-2xl leading-0"></i>
                     </button>
                 </div>
                 <div class="w-full h-full   flex justify-center items-center">
-                    <ul class="text-base flex flex-col  h-1/2   justify-between     items-center">
-                        <li class="text-primary"><a href="#" class="font-semibold  ">All
-                                Categories</a></li>
-                        <li><a href="#">Apple</a></li>
-                        <li><a href="#">Samsung</a></li>
-                        <li><a href="#">Meizu</a></li>
-                        <li><a href="#">Xiaomi</a></li>
-                        <li><a href="#">Huawei</a></li>
-                        <li><a href="#">Asus</a></li>
-                        <li><a href="#">Nokia</a></li>
-                        <li><a href="#">Metotola</a></li>
-                        <li><a href="#">Caterpillar</a></li>
+                    <ul class="text-base flex flex-col  h-1/2 containermobile   justify-between     items-center">
 
                     </ul>
                 </div>
@@ -229,24 +202,25 @@
             Laptops
             Accessories</h1>
         <section class=" flex flex-col lg:flex-row  gap-8">
-            <aside id="sidebar" onclick="MoblieNavBar(`sidebar`)"
-                class="  lg:w-1/4    fixed top-0 right-0 lg:sticky z-50 w-full  lg:top-1 hidden flex lg:flex justify-end  bg-black/50  lg:bg-white max-h-screen  order-2 lg:order-1">
+            <aside id="sidebar" onclick="MoblieNavBar(`sidebar`,true)"
+                class="  lg:w-1/4 lg:h-fit h-screen fixed top-0 right-0 lg:sticky z-50 w-full duration-300 opacity-0  lg:top-1 hidden flex lg:flex! lg:opacity-100  justify-end  bg-black/50  lg:bg-white max-h-screen  order-2 lg:order-1">
                 <div onclick="event.stopPropagation()"
-                    class="lg:w-full relative w-1/2 bg-white shadow-lg rounded-l-2xl rounded-bl-2xl  pt-4 ">
+                    class="lg:w-full   lg:-translate-x-full! overflow-hidden relative xxsm:w-1/2 w-full duration-300 bg-white shadow-lg lg:rounded-l-none lg:rounded-bl-none xxsm:rounded-l-2xl xxsm:rounded-bl-2xl   pt-4 "
+                    style="transform: translateX(100%);">
                     <div class="lg:hidden px-3">
-                        <button class="" onclick="MoblieNavBar(`sidebar`)">
+                        <button class=" cursor-pointer" onclick="MoblieNavBar(`sidebar`,true)">
                             <i class="bi bi-x text-2xl leading-0"></i>
                         </button>
                     </div>
-                    <div class="space-y-3 overflow-y-auto max-h-screen">
+                    <div class="space-y-3 overflow-y-auto max-h-screen lg:pb-0 pb-10">
                         <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
                             <div class="flex gap-2 cursor-pointer showmenua">
                                 <button class="w-5 h-5">
-                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                    <i class="bi bi-caret-down-fill  mb-1"></i>
                                 </button>
                                 <h2 class="font-semibold mb-2">Related Categories</h2>
                             </div>
-                            <div class="ml-7  flex  text-sm  flex-col gap-1">
+                            <div class="ml-7 max-h-96  overflow-hidden duration-300 flex  text-sm  flex-col gap-1">
                                 <p class="text-graytext font-medium">
                                     < Catogores</p>
                                         <ul class="ml-4 text-secendy/90 font-medium space-y-1">
@@ -257,11 +231,12 @@
                         <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
                             <div class="flex gap-2 cursor-pointer showmenua">
                                 <button class="w-5 h-5">
-                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                    <i class="bi bi-caret-down-fill  mb-1"></i>
                                 </button>
                                 <h2 class="font-semibold mb-2">Related Categories</h2>
                             </div>
-                            <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-2">
+                            <div
+                                class="ml-7 mt-2 w-4/5  text-sm flex flex-col max-h-72 gap-2 overflow-hidden duration-300">
                                 <button
                                     class="border bg-white  justify-between border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
                                     <span class="font-semibold">Android 6.0</span>
@@ -273,11 +248,12 @@
                         <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
                             <div class="flex gap-2 cursor-pointer showmenua">
                                 <button class="w-5 h-5">
-                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                    <i class="bi bi-caret-down-fill  mb-1"></i>
                                 </button>
                                 <h2 class="font-semibold mb-2">Price</h2>
                             </div>
-                            <div class="ml-7 mt-2 w-4/5  text-sm flex flex-col gap-3">
+                            <div
+                                class="ml-7 mt-2 w-4/5  text-sm flex flex-col max-h-72 gap-3 overflow-hidden duration-300">
                                 <input type="range" min="55" max="5000" class="w-full bg-primary">
                                 <button class="  text-gray-700 flex items-center ">
                                     Price:<span class="font-semibold">$55 - $5000</span>
@@ -287,11 +263,11 @@
                         <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
                             <div class="flex gap-2 cursor-pointer showmenua">
                                 <button class="w-5 h-5">
-                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                    <i class="bi bi-caret-down-fill  mb-1"></i>
                                 </button>
                                 <h2 class="font-semibold mb-2">Operating System</h2>
                             </div>
-                            <div class="ml-7 text-sm flex flex-col gap-1">
+                            <div class="ml-7 text-sm flex flex-col gap-1 duration-300 overflow-hidden max-h-72">
                                 <ul class=" text-graytext font-medium  space-y-1">
                                     <li class="text-primary">Android 6.0</li>
                                     <li>Android 6.0</li>
@@ -304,11 +280,11 @@
                         <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
                             <div class="flex gap-2 cursor-pointer showmenua">
                                 <button class="w-5 h-5">
-                                    <i class="bi bi-caret-down-fill text-black mb-1"></i>
+                                    <i class="bi bi-caret-down-fill  mb-1"></i>
                                 </button>
                                 <h2 class="font-semibold mb-2">Screen Size</h2>
                             </div>
-                            <div class="ml-7 text-sm flex flex-col gap-1">
+                            <div class="ml-7 text-sm flex flex-col gap-1 duration-300 overflow-hidden max-h-72">
                                 <ul class=" text-graytext font-medium  flex flex-col gap-2">
                                     <li>1920x1200</li>
                                     <li>1280x800</li>
@@ -328,7 +304,7 @@
                                 </button>
                                 <h2 class="font-semibold mb-2">Product Core</h2>
                             </div>
-                            <div class="ml-7 text-sm flex flex-col gap-1">
+                            <div class="ml-7 text-sm flex flex-col gap-1 duration-300 overflow-hidden max-h-72">
 
                             </div>
                         </div>
@@ -340,31 +316,31 @@
                                 </button>
                                 <h2 class="font-semibold mb-2">Table Data Capacity</h2>
                             </div>
-                            <div class="ml-7 text-sm flex flex-col gap-1">
+                            <div class="ml-7 text-sm flex flex-col gap-1 duration-300 overflow-hidden max-h-72">
 
                             </div>
                         </div>
 
-                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                        <div class="border-b border-gray-300 pb-2  px-3 parent items-center">
                             <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
                                 <button class="w-5 h-5">
                                     <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
                                 </button>
                                 <h2 class="font-semibold mb-2">Processor Core</h2>
                             </div>
-                            <div class="ml-7 text-sm flex flex-col gap-1">
+                            <div class="ml-7 text-sm flex flex-col gap-1 duration-300 overflow-hidden max-h-72">
 
                             </div>
                         </div>
 
-                        <div class="border-b border-gray-300 pb-2 px-3 parent items-center">
+                        <div class="border-b border-gray-300 pb-2 px-3 mb-3 parent items-center">
                             <div class="flex gap-2 cursor-pointer text-gray-600 showmenua">
                                 <button class="w-5 h-5">
                                     <i class="bi bi-caret-down-fill  mb-1 before:-rotate-90"></i>
                                 </button>
                                 <h2 class="font-semibold mb-2">Table Data Capacity</h2>
                             </div>
-                            <div class="ml-7 text-sm flex flex-col gap-1">
+                            <div class="ml-7 text-sm flex flex-col gap-1 duration-300 overflow-hidden max-h-72">
 
                             </div>
                         </div>
@@ -377,16 +353,22 @@
                 <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-3">
                     <div class="flex items-center gap-4 ">
                         <div>
-                            <i class="bi bi-grid-fill text-primary text-xl"></i>
-                            <i class="bi bi-list text-black/20 font-black text-2xl"></i>
+                            <button class="cursor-pointer  text-primary buttonchangelayout"
+                                onclick="cahngeLayout(event,`grid`)">
+                                <i class="bi bi-grid-fill text-xl"></i>
+                            </button>
+                            <button class="cursor-pointer buttonchangelayout text-black/20"
+                                onclick="cahngeLayout(event,`flex`)">
+                                <i class="bi bi-list  font-black text-2xl"></i>
+                            </button>
                         </div>
                         <div>
                             <p class="text-gray-600 text-sm mt-1">Showing 16 / 125 results</p>
                         </div>
                     </div>
-                    <div class="relative flex gap-2 items-center">
+                    <div class="relative flex gap-2  items-center">
                         <button id="dropdownButton"
-                            class="border bg-white border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
+                            class="border bg-white xxs:text-sm md:text-base text-xs border-gray-300 rounded-full px-4 py-2 text-gray-700 flex items-center gap-2 focus:outline-none">
                             Sort by: <span class="font-semibold">price low to high</span>
                             <i class="bi bi-caret-down-fill text-gray-500"></i>
                         </button>
@@ -401,311 +383,13 @@
                             </ul>
                         </div>
                         <button class="lg:hidden block text-2xl mb-3 cursor-pointer"
-                            onclick="MoblieNavBar(`sidebar`)"><i class="bi bi-filter-right"></i>
+                            onclick="MoblieNavBar(`sidebar`,true)"><i class="bi bi-filter-right"></i>
                         </button>
                     </div>
 
                 </div>
 
-                <div class="grid grid-cols-1 xxsm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 ">
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div
-                        class="bg-white relative hover:z-20 group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <span
-                            class="rounded-r-2xl rounded-br-2xl bg-red-500 absolute top-0 left-0 px-3 py-1 text-white">-50%</span>
-                        <div class="w-full h-80">
-                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="bg-white relative group rounded hover:z-20 hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <span
-                            class="rounded-r-2xl rounded-br-2xl  bg-blue-500 absolute top-0 left-0 px-3 py-1 text-white">New</span>
-                        <div class="w-full h-80">
-                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/images.jpeg" class="w-full h-full " alt="product">
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                        <div class="w-full h-80">
-                            <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
-                        </div>
-
-                        <div class="flex flex-col gap-2">
-                            <div class="flex gap-2 text-startcolor">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill text-gray-300"></i>
-                            </div>
-                            <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                            <p class="text-black font-bold ">$329.99</p>
-
-                            <div
-                                class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                                <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                                <button
-                                    class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                    <i class="bi bi-heart"></i>
-
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-
+                <div id="containerproduct" class="flex justify-between flex-wrap">
 
                 </div>
                 <button
@@ -715,7 +399,7 @@
                     Show more
                 </button>
                 <div class=" flex justify-center items-center ">
-                    <div class="flex items-center space-x-2">
+                    <div class="flex flex-wrap items-center space-x-2 space-y-2">
                         <button
                             class="h-10 w-10 flex items-center justify-center  bg-white border border-gray-300 cursor-pointer hover:bg-blue-100 transition-colors">
                             <i class="bi bi-chevron-left text-gray-600"></i>
@@ -750,126 +434,10 @@
 
         <section>
             <h1 class="text-2xl text-graytext font-medium">Recend Viewed</h1>
-            <div class="grid grid-cols-1 lg:gap-10 md:gap-5 mt-5 xxsm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 ">
-
-                <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                    <div class="w-full h-80">
-                        <img src="./images/images.jpeg" class="w-full h-full " alt="product">
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <div class="flex gap-2 text-startcolor">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill text-gray-300"></i>
-                        </div>
-                        <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                        <p class="text-black font-bold ">$329.99</p>
-
-                        <div
-                            class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                            <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                            <button
-                                class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                <i class="bi bi-heart"></i>
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div id="RecendViewed"
+                class="grid grid-cols-1 lg:gap-10 md:gap-5 mt-5 xxsm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 ">
 
 
-                <div class="bg-white group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                    <div class="w-full h-80">
-                        <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
-                    </div>
-
-                    <div class="flex flex-col gap-2">
-                        <div class="flex gap-2 text-startcolor">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill text-gray-300"></i>
-                        </div>
-                        <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                        <p class="text-black font-bold ">$329.99</p>
-
-                        <div
-                            class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                            <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                            <button
-                                class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                <i class="bi bi-heart"></i>
-
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div
-                    class="bg-white relative hover:z-20 group rounded hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                    <span
-                        class="rounded-r-2xl rounded-br-2xl bg-red-500 absolute top-0 left-0 px-3 py-1 text-white">-50%</span>
-                    <div class="w-full h-80">
-                        <img src="./images/images.jpeg" class="w-full h-full " alt="product">
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <div class="flex gap-2 text-startcolor">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill text-gray-300"></i>
-                        </div>
-                        <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                        <p class="text-black font-bold ">$329.99</p>
-
-                        <div
-                            class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                            <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                            <button
-                                class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                <i class="bi bi-heart"></i>
-
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    class="bg-white relative group rounded hover:z-20 hover:scale-105 hover:shadow-2xl duration-300   p-4 px-5">
-                    <span
-                        class="rounded-r-2xl rounded-br-2xl  bg-blue-500 absolute top-0 left-0 px-3 py-1 text-white">New</span>
-                    <div class="w-full h-80">
-                        <img src="./images/71Mt4JAZQtL.jpg" class="w-full h-full " alt="product">
-                    </div>
-
-                    <div class="flex flex-col gap-2">
-                        <div class="flex gap-2 text-startcolor">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill text-gray-300"></i>
-                        </div>
-                        <h3 class="font-bold text-sm text-black/80  ">Lenovo P8 Tab 8</h3>
-                        <p class="text-black font-bold ">$329.99</p>
-
-                        <div
-                            class="flex justify-between items-center max-h-0 overflow-hidden group-hover:max-h-72 duration-300">
-                            <button class="bg-primary text-white px-3 py-2 rounded-full">Add to cart</button>
-                            <button
-                                class="border border-gray-300   rounded-full h-10 w-10 flex justify-center items-center text-base">
-                                <i class="bi bi-heart"></i>
-
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
 
             </div>
         </section>
@@ -881,7 +449,7 @@
             <div class="parent">
                 <button class="font-semibold showmenua text-white mb-3 sm:cursor-default cursor-pointer">Contact
                     us</button>
-                <div class="sm:block hidden">
+                <div class=" sm:overflow-visible duration-300 overflow-hidden sm:max-h-screen!  max-h-0 hide">
                     <p>(800) 123 456 7890</p>
                     <p>manager@youshop.com</p>
                     <p>Location store</p>
@@ -891,7 +459,8 @@
                 <button class="font-semibold text-white showmenua mb-3 sm:cursor-default cursor-pointer">Policies &
                     Info</button>
 
-                <ul class="space-y-1 sm:block hidden">
+                <ul class="space-y-1 sm:block sm:overflow-visible duration-300 overflow-hidden sm:max-h-screen! hide max-h-0"
+                    style="max-height: 0px;">
                     <li><a href="#">Terms & Conditions</a></li>
                     <li><a href="#">Policy for Sellers</a></li>
                     <li><a href="#">Policy for Buyers</a></li>
@@ -904,7 +473,8 @@
             <div class="parent">
                 <button class="font-semibold showmenua text-white mb-3 sm:cursor-default cursor-pointer">Quick
                     Links</button>
-                <ul class="space-y-1 sm:block hidden">
+                <ul
+                    class="space-y-1 sm:block sm:overflow-visible duration-300 overflow-hidden sm:max-h-screen! hide max-h-0">
                     <li><a href="#">Seller Login</a></li>
                     <li><a href="#">Seller Sign-up</a></li>
                     <li><a href="#">Seller Handbook</a></li>
@@ -917,7 +487,8 @@
                 <button class="font-semibold showmenua text-white mb-3 sm:cursor-default cursor-pointer">My
                     Account</button>
 
-                <ul class="space-y-1 sm:block hidden">
+                <ul
+                    class="space-y-1 sm:block sm:overflow-visible duration-300 overflow-hidden sm:max-h-screen! hide max-h-0">
                     <li><a href="#">Accessories</a></li>
                     <li><a href="#">Balcony Tabl</a></li>
                     <li><a href="#">Bar Units</a></li>
@@ -935,14 +506,19 @@
                         class="w-full bg-white text-black placeholder:text-gray-600 rounded-full   px-4   py-2   text-sm focus:outline-0">
                     <button
                         class="bg-primary  right-0 py-2 px-3 flex justify-center items-center text-white rounded-full  rounded-l top-0 h-full  absolute text-base cursor-pointer">
-                        <i class="bi bi-search flex"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-send" viewBox="0 0 16 16">
+                            <path
+                                d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+                        </svg>
+
                     </button>
                 </div>
             </div>
         </div>
         <div class="bg-black mt-14">
 
-            <div class="max-w-7xl px-4 py-3 text-sm mx-auto text-white/50">
+            <div class="max-w-7xl  px-4 py-3 text-sm mx-auto  text-white/50">
 
                 <div>
                     <h1>Copyright 2018</h1>
@@ -953,6 +529,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/DataBase.js"></script>
     <script>
 
         window.onload = () => {
@@ -962,14 +539,50 @@
         showmenua.forEach(item => {
             item.addEventListener("click", (event) => {
 
-                event.target.closest(".parent").children[1].classList.toggle("hidden")
+                let icon = event.currentTarget.querySelector("i");
+                if (icon) {
+                    icon.classList.toggle("before:-rotate-90");
+                    icon.parentElement.parentElement.classList.toggle("text-gray-600");
+                }
+
+                let element = event.target.closest(".parent").children[1];
+                element.classList.toggle("hide");
+                if (element.classList.contains('hide')) {
+                    element.style.maxHeight = "0px";
+                }
+                else {
+                    element.style.maxHeight = "300px";
+
+                }
             })
         })
 
 
-        function MoblieNavBar(id) {
+        function MoblieNavBar(id, isright = false) {
             let container = document.getElementById(id);
-            container.classList.toggle("hidden");
+            let postion = isright ? 100 : -100;
+            if (container.classList.contains("hidden")) {
+                container.classList.remove("hidden");
+                setTimeout(() => {
+                    container.style.opacity = '1';
+                }, 100)
+                setTimeout(() => {
+                    container.children[0].style.transform = 'translateX(0)';
+                }, 300)
+
+            }
+            else {
+
+                container.children[0].style.transform = `translateX(${postion}%)`;
+                setTimeout(() => {
+                    container.style.opacity = '0';
+                }, 300)
+                setTimeout(() => {
+                    container.classList.add("hidden");
+                }, 600)
+
+
+            }
         }
 
         // select 
@@ -983,7 +596,6 @@
             menu.classList.toggle("hidden");
         });
 
-        // Pick option
         options.forEach(option => {
             option.addEventListener("click", () => {
                 selectedText.textContent = option.textContent;
@@ -996,6 +608,124 @@
             if (!button.contains(e.target) && !menu.contains(e.target)) {
                 menu.classList.add("hidden");
             }
+        });
+        function cahngeLayout(e, layout) {
+
+            // تحديث الأزرار
+            document.querySelectorAll('.buttonchangelayout').forEach(item => {
+                item.classList.remove('text-primary', 'text-black/20')
+                item.classList.add('text-black/20')
+            })
+            e.target.parentElement.classList.add('text-primary')
+
+            // تحديث الكروت
+            document.querySelectorAll(".cardproduct").forEach(item => {
+                let hoverdiv = item.querySelector('.hoverdiv')
+                hoverdiv.style.maxHeight = "300px";
+                console.log(hoverdiv)
+                updateCardLayout(item, layout)
+                swapStarsAndTitle(item, layout)
+            })
+        }
+
+        function updateCardLayout(item, layout) {
+            let imag = item.children[0]
+            let productdecritpion = document.querySelectorAll(".productdecritpion")
+            let continerProductitem = document.querySelectorAll(".continerProductitem")
+            let displaystyle = "";
+            if (layout === "grid") {
+                displaystyle = "none";
+                continerProductitem.forEach(item => {
+                    item.classList.remove("justify-center", "items-center")
+                })
+                item.classList.add('xl:w-1/4', 'md:w-1/3', 'xxs:w-1/2', 'w-full')
+                item.classList.remove('md:w-1/2', 'flex', 'gap-2')
+
+                imag.classList.add('h-80')
+                imag.classList.remove('w-40', 'h-full')
+            } else {
+                displaystyle = "block";
+                continerProductitem.forEach(item => {
+                    console.log(item)
+                    item.classList.add("justify-center", "items-center")
+                })
+                item.classList.remove('xl:w-1/4', 'md:w-1/3', 'xxs:w-1/2')
+                item.classList.add('md:w-1/2', 'flex', 'gap-2')
+
+                imag.classList.add('w-40', 'h-40')
+                imag.classList.remove('h-80', 'w-full')
+            }
+            productdecritpion.forEach(item => {
+                item.style.display = displaystyle;
+            })
+        }
+
+        function swapStarsAndTitle(item, layout) {
+            let stars = item.querySelector(".stars")
+            let title = item.querySelector(".title")
+
+            if (!stars || !title) return
+
+            if (layout === "grid") {
+                title.parentNode.insertBefore(stars, title)
+            } else {
+                stars.parentNode.insertBefore(title, stars)
+            }
+        }
+        const items = [
+            { name: "All Categories", icon: "bi-list", active: true },
+            { name: "Apple", icon: "bi-list" },
+            { name: "Samsung", icon: "bi-list" },
+            { name: "Meizu", icon: "bi-list" },
+            { name: "Xiaomi", icon: "bi-list" },
+            { name: "Huawei", icon: "bi-list" },
+            { name: "Asus", icon: "bi-list" },
+            { name: "Nokia", icon: "bi-list" },
+            { name: "Motorola", icon: "bi-list" },
+            { name: "Caterpillar", icon: "bi-list" }
+        ];
+
+        const container = document.querySelector(".listitems");
+        const containermobile = document.querySelector(".containermobile")
+        items.forEach(item => {
+
+            containermobile.innerHTML += `
+             <li class="${item.active ? "activemobile" : ""}"><a href="#" >${item.name}</a></li>
+            `
+            const li = document.createElement("li");
+            if (item.active) li.classList.add("active");
+
+            const a = document.createElement("a");
+            a.href = "#";
+            a.innerHTML = `
+            <div>
+                <i class="bi ${item.icon} toptablet:text-4xl text-2xl"></i>
+            </div>
+            <div class="toptablet:mt-0 mt-1">
+                ${item.name}
+            </div> `
+            li.appendChild(a);
+            container.appendChild(li);
+        });
+
+
+        const containermobileitems = document.querySelectorAll(".containermobile li");
+
+        containermobileitems.forEach((item) => {
+            item.addEventListener("click", () => {
+                containermobileitems.forEach((li) => li.classList.remove("activemobile"));
+
+                item.classList.add("activemobile");
+            });
+        });
+        const listItems = document.querySelectorAll(".listitems li");
+
+        listItems.forEach((item) => {
+            item.addEventListener("click", () => {
+                listItems.forEach((li) => li.classList.remove("active"));
+
+                item.classList.add("active");
+            });
         });
     </script>
 </body>

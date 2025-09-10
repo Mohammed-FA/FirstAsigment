@@ -20,3 +20,21 @@ body{
     background-color: #F9F9F9;
 }
 
+
+ .active {
+     @apply toptablet:w-1/4 w-40 bg-primary px-4 items-center  text-center flex pb-2 pt-1 text-white;
+ }
+.active a{
+    @apply font-semibold flex items-center toptablet:gap-3 gap-1;
+}
+ li.active i{
+    display: block;
+ }
+
+ li i{
+    display: none;
+ }
+
+ .activemobile{
+    @apply text-primary font-semibold;
+ }
